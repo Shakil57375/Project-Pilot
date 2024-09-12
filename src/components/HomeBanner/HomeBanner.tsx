@@ -1,10 +1,14 @@
+import { FC } from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Scribfolio from "../Scribfolio/Scribfolio";
 import "./HomeBanner.css";
 import Typewriter from "typewriter-effect";
 import { GiRoundStar } from "react-icons/gi";
 import { VscStarFull } from "react-icons/vsc";
-const HomeBanner = () => {
+
+// Define HomeBanner as a Functional Component (FC)
+const HomeBanner: FC = () => {
   return (
     <div className="h-fit !z-0">
       <div className="flex items-center flex-col space-y-10 relative ">
@@ -17,13 +21,11 @@ const HomeBanner = () => {
           <Scribfolio />
         </div>
         <div className="glow-bg-2 w-[300px] lg:[900px] "></div>
-        <span className="text-5xl  text-center  bg-gradient-to-r text-transparent bg-clip-text from-[#fcff2f] to-[#FF56F6] font-bold hover:from-[#FF56F6] hover:to-[#f9ff40] ">
+        <span className="text-5xl text-center bg-gradient-to-r text-transparent bg-clip-text from-[#fcff2f] to-[#FF56F6] font-bold hover:from-[#FF56F6] hover:to-[#f9ff40] ">
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString(
-                  "Project Pilot <br/> Your Flight to Project Success."
-                )
+                .typeString("Project Pilot <br/> Your Flight to Project Success.")
                 .pauseFor(1000)
                 .deleteChars(31)
                 .typeString("Your Journey to Project Excellence.")
@@ -42,11 +44,12 @@ const HomeBanner = () => {
           />
         </span>
         <p className="text-center text-white">
-          Task-Wave Is Hub For Managing Productivity Tasks <br /> Professionally
-          And Efficiently
+          Task-Wave Is Hub For Managing Productivity Tasks <br /> Professionally And Efficiently
         </p>
         <div className="space-y-2">
-          <Button>Get Started</Button>
+          <Link to={"/login"}>
+            <Button>Get Started</Button>
+          </Link>
           <p>
             <span className="text-white">Already Using Task-Wave?</span>{" "}
             <span className="text-[#ff2d60] cursor-pointer">Sign In</span>
@@ -54,7 +57,7 @@ const HomeBanner = () => {
         </div>
         <div className="flex w-full lg:flex-row justify-center items-center">
           <div className="flex lg:flex-row flex-col items-start lg:items-end gap-5 border border-t-0 border-l-0 border-b-0 border-r-2 border-gray-400 px-5 mr-5">
-            <div className="flex  items-start">
+            <div className="flex items-start">
               <img
                 src="https://media.istockphoto.com/id/1181396841/photo/trendy-african-man.jpg?s=612x612&w=0&k=20&c=89F1KJHsttzyiuaJ5M0Rd4tLgiX7ooYDoPw7oNYZ5UI="
                 className="w-12 h-12 rounded-full relative left-10 z-10"
@@ -78,7 +81,7 @@ const HomeBanner = () => {
           </div>
           <div className="flex flex-col justify-start space-y-2">
             <p className="text-white text-3xl font-bold">4.8/5</p>
-            <p className=" flex gap-2">
+            <p className="flex gap-2">
               <div className="flex items-center">
                 <GiRoundStar className="text-white text-lg" />
                 <GiRoundStar className="text-white text-lg" />
