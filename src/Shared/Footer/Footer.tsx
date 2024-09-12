@@ -11,7 +11,6 @@ const Footer = () => {
           <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </nav>
-        <div className="rounded_gradient_bg_right rounded-br-full bg-yellow-500 absolute bottom-0 -right-[550px] w-96 h-96 hidden lg:block"></div>
         <nav>
           <header className="footer-title">Company</header>
           <a className="link link-hover">About us</a>
@@ -29,7 +28,11 @@ const Footer = () => {
       <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300">
         <aside className="items-center grid-flow-col">
           <div className="flex flex-col">
-            <Texts headerText=""  styledTitle="project pilot" peragraphText="Providing services since 2015"/>
+            <Texts
+              headerText=""
+              styledTitle="project pilot"
+              peragraphText="Providing services since 2015"
+            />
           </div>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
