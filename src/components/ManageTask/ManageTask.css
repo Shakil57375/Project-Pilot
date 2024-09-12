@@ -1,0 +1,40 @@
+.glow-bg {
+  transform-origin: center center;
+  background-image: linear-gradient(
+    to right top,
+    #6c22bd,
+    #8b25bb,
+    #a52bb9,
+    #bc34b7,
+    #d040b5,
+    #e645a5,
+    #f55195,
+    #ff6188,
+    #ff796e,
+    #ff965b,
+    #f5b255,
+    #e1cd60
+  );
+  width: 500px;
+  height: 500px;
+  filter: blur(200px);
+  opacity: 0.7;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  border-radius: 20px;
+  transform: skewY(-15deg) translate(-50%, -50%) scale(0.8) translateZ(0);
+  pointer-events: none;
+  transition: filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+video {
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}

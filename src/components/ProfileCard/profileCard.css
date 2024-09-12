@@ -1,0 +1,141 @@
+.card {
+  position: relative;
+  width: 400px;
+  height: 280px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  border-radius: 30px !important;
+}
+
+@media screen and (min-width: 300px) {
+  .card {
+    width: 300px;
+    border-radius: 30px !important;
+  }
+
+  .card .img-box {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.card .lines {
+  position: absolute;
+  inset: 0;
+  background: #111111;
+  overflow: hidden;
+}
+
+.card .img-box {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card .img-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    #ec185b,
+    #ec185b,
+    #ec185b,
+    transparent
+  );
+  animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.card .img-box::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.card .img-box img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+}
+
+.card .contents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card .contents .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(0);
+}
+
+.card .contents .details h2 {
+  font-size: 1.75em;
+  font-weight: 600;
+  color: #45f3ff;
+  line-height: 1em;
+  position: relative;
+  top: 12px;
+}
+
+.card .contents .details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.card .contents .details .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card .contents .details .data h3 {
+  font-size: 1em;
+  color: #45f3ff;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.card .contents .details .data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.card .contents .details .actionBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

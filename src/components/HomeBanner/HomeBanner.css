@@ -1,0 +1,38 @@
+.my-shadow {
+  background-color: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.glow-bg-2 {
+  
+  height: 500px;
+  filter: blur(100px);
+  opacity: 0.4;
+  top: 0;
+  z-index: 50;
+  transition: filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transform-origin: center center;
+  background-image: linear-gradient(
+    to right top,
+    #6c22bd,
+    #8b25bb,
+    #a52bb9,
+    #bc34b7,
+    #d040b5,
+    #e645a5,
+    #f55195,
+    #ff6188,
+    #ff796e,
+    #ff965b,
+    #f5b255,
+    #e1cd60
+  );
+  position: absolute;
+  left: 50%;
+  border-radius: 20px;
+  transform: skewY(-15deg) translate(-50%, -50%) scale(0.9) translateZ(0);
+  pointer-events: none;
+}

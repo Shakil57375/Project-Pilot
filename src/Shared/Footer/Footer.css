@@ -1,0 +1,7 @@
+.rounded_gradient_bg_right {
+  background-image: linear-gradient(to right top, #6c22bd, #8b25bb, #a52bb9);
+  filter: blur(200px);
+  opacity: 0.7;
+  transform: skewY(-15deg) translate(-50%, -50%) scale(0.8) translateZ(0);
+  pointer-events: none;
+}
